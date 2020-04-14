@@ -1,4 +1,10 @@
-//v 4.0 save / get array via cookies
+//v4.0 Add popup describing app when visitors load webpage the first time
+window.onload = function() {
+alert("Welcome to 'Shopping List' App!\n\nCreated by Chuck Konkol\n**Javascript(Web233)**\n\nQuestions?\nemail Chuck Konkol\nckonkol@gmail.com");
+populateshoppinglistonload();
+displayShoppinglists();
+clearFocus();
+};
 
 //v 4.0 read cookie on load and display
 window.onload = function() {
@@ -67,7 +73,7 @@ function populateshoppinglistonload()
 
 var MyItems = {
   name:"",
-  price:""
+  //price:""
 };
 
 var shoppinglist = [];
@@ -146,7 +152,7 @@ function addShoppinglist(item,cost) {
   //v 3.0 edit value for MyItems.name
   MyItems.name=item;
   //v 3.0 edit value for MyItems.cost
-  MyItems.price=cost;
+  //MyItems.price=cost;
   //v 3.0 for loop through object propterties and 
   for (var x in MyItems){
     if (count===1){
@@ -174,7 +180,6 @@ function addShoppinglist(item,cost) {
 function clearFocus()
 {
   document.getElementById("item").value = "";
-   document.getElementById("cost").value = "";
   document.getElementById("item").focus();
 }
 
